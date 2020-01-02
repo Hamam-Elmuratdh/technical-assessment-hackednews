@@ -3,7 +3,7 @@ import React from 'react';
 // Build out the view for the top ten HackerNews stories here. 
 // Each story should have a title, author, and score. 
 // You may wish to refactor the existing component structure - that's fine.
-const TopTen = () => (
+const TopTen = ({stories}) => (
   <div>
   <h1> Top Ten Stories </h1>
   <table>
@@ -15,16 +15,17 @@ const TopTen = () => (
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Switch – New Video Game System [video]</td>
-        <td>ocdtrekkie</td>
-        <td>536</td>
+      {
+        stories.slice(1,10).map(story =>(
+
+        
+      <tr k =  {story.id}>
+        <td>{story.tittle}</td>
+        <td>{story.author}</td>
+        <td>{story.score}</td>
       </tr>
-      <tr>
-        <td>Video Games Are Changing the Way Soccer Is Played</td>
-        <td>mhb</td>
-        <td>100</td>
-      </tr>
+        ))
+        }
     </tbody>
   </table>
 </div>

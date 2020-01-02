@@ -6,6 +6,8 @@ var router = express.Router();
 router.route('/')
   .get(function(req, res) {
      // TODO: Replace this with stories you've retrieved from the database
+     req.
+     
      res.json([
        {
          author: 'ocdtrekkie',
