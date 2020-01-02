@@ -1,7 +1,7 @@
 var express = require('express');
 // var storyController = require('db/models/controllors/story.js');
 var Author = require('/../../db/models/author.js');
-
+var router = express.Router();
 router.route('/')
   .get(async function(req, res) {
      // TODO: Replace this with stories you've retrieved from the database
@@ -9,12 +9,12 @@ router.route('/')
      // the data requird retreving = find all 
      //response .JSON (data) 
 
-    //  let data = await findAll()
-    //  try {
-    //  req.JSON(data)}
-    //  catch(err){
-    //    res.status(500).JSON({err:"please try again later"})
-    //  }
+     let data = await findAll()
+     try {
+     req.JSON(data)}
+     catch(err){
+       res.status(500).JSON({err:"please try again later"})
+     }
     
      
      

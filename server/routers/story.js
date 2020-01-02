@@ -11,12 +11,12 @@ router.route('/')
      // the data requird retreving = find all 
      //response .JSON (data) 
 
-    //  let data = await findAll()
-    //  try {
-    //  req.JSON(data)}
-    //  catch(err){
-    //    res.status(500).JSON({err:"please try again later"})
-    //  }
+     let data = await findAll()
+     try {
+     req.JSON(data)}
+     catch(err){
+       res.status(500).JSON({err:"please try again later"})
+     }
     
      
      
