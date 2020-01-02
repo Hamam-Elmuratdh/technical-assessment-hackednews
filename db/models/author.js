@@ -1,8 +1,6 @@
 var express = require('express');
 // var storyController = require('db/models/controllors/story.js');
-var story = require ('../../db/models/story.js')
-
-var router = express.Router();
+var Author = require('/../../db/models/author.js');
 
 router.route('/')
   .get(async function(req, res) {
